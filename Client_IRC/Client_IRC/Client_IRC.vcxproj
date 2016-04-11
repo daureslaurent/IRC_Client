@@ -118,11 +118,13 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="clientIrc.cpp" />
     <ClCompile Include="irc_net.cpp" />
     <ClCompile Include="main.cpp" />
     <ClCompile Include="reseau_cli.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="clientIrc.h" />
     <ClInclude Include="irc_net.h" />
     <ClInclude Include="reseau_cli.h" />
   </ItemGroup>
