@@ -1,12 +1,11 @@
-﻿La génération a démarré 11/04/2016 19:46:11.
+﻿La génération a démarré 11/04/2016 20:46:18.
      1>Projet "D:\Github\IRC_Client\Client_IRC\Client_IRC\Client_IRC.vcxproj" sur le nœud 2 (Build cible(s)).
      1>ClCompile:
-         C:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\bin\CL.exe /c /ZI /nologo /W3 /WX- /sdl /Od /Oy- /D _MBCS /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"Debug\\" /Fd"Debug\vc140.pdb" /Gd /TP /analyze- /errorReport:prompt irc_net.cpp main.cpp
-         main.cpp
-         irc_net.cpp
-         Génération de code en cours...
+         C:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\bin\CL.exe /c /ZI /nologo /W3 /WX- /sdl /Od /Oy- /D _MBCS /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"Debug\\" /Fd"Debug\vc140.pdb" /Gd /TP /analyze- /errorReport:prompt clientIrc.cpp
+         clientIrc.cpp
        Link:
-         C:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:"D:\Github\IRC_Client\Client_IRC\Debug\Client_IRC.exe" /INCREMENTAL /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /Debug /PDB:"D:\Github\IRC_Client\Client_IRC\Debug\Client_IRC.pdb" /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"D:\Github\IRC_Client\Client_IRC\Debug\Client_IRC.lib" /MACHINE:X86 Debug\irc_net.obj
+         C:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:"D:\Github\IRC_Client\Client_IRC\Debug\Client_IRC.exe" /INCREMENTAL /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /Debug /PDB:"D:\Github\IRC_Client\Client_IRC\Debug\Client_IRC.pdb" /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"D:\Github\IRC_Client\Client_IRC\Debug\Client_IRC.lib" /MACHINE:X86 Debug\clientIrc.obj
+         Debug\irc_net.obj
          Debug\main.obj
          Debug\reseau_cli.obj
          Client_IRC.vcxproj -> D:\Github\IRC_Client\Client_IRC\Debug\Client_IRC.exe
@@ -14,4 +13,4 @@
 
 La génération a réussi.
 
-Temps écoulé 00:00:02.31
+Temps écoulé 00:00:01.10
