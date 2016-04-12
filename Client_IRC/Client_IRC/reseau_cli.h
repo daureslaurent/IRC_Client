@@ -21,7 +21,7 @@
 #include <sstream>
 
 
-#define		MAX_BUF 512
+#define		MAX_BUF 2048
 
 class reseau
 {

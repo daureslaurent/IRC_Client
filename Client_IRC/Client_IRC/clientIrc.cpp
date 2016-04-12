@@ -18,7 +18,10 @@ bool clientIrc::checkCmd(std::string inData)
 	{
 		inData.erase(inData.size() - 2, 2);
 		inData.erase(0, 6);
+
 		std::string pongReq = "PONG " + inData + "\r\n";
+		
+		std::cout << "SEND[" << pongReq << "]" << std::endl;
 		_net.Send(pongReq);
 	}
 	return false;
@@ -38,7 +41,7 @@ bool clientIrc::Run()
 	if (!Init())
 		return false;
 
-	_net.connect("nickname", "hostname", "servname", "Real Name");
+	_net.connect("nickname123", "hostnamelo", "lolodudidi", "servname", "Real Name");
 	while (true)
 	{
 		checkCmd(_net.Recv());

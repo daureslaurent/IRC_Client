@@ -59,6 +59,7 @@ bool reseau::Init(std::string addr, int port)
 
 void reseau::Send(std::string msg)
 {
+	std::cout << "Send[" << msg << "]" << std::endl;
 	sendto(_socket, msg.c_str(), msg.size(), 0, (struct sockaddr *)&_serv, sizeof(_serv));
 }
 
@@ -69,11 +70,12 @@ std::string reseau::Recv()
 	struct sockaddr_in client;
 	int		sock_l = sizeof(client);
 
-	ocr = recvfrom(_socket, (char*)&buf, MAX_BUF, 0, (sockaddr*)&client, &sock_l);
+	ocr = recvfrom(_socket, (char*)&buf, MAX_BUF-1, 0, (sockaddr*)&client, &sock_l);
 	if (ocr == -1)
 		return "ERR";
 	else
 		buf[ocr] = 0;
+	std::cout << "Recv[" << std::string((char*)&buf) << "]" << std::endl;
 	return std::string((char*)&buf);
 }
 
