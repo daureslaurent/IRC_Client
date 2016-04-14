@@ -75,7 +75,7 @@ std::string reseau::Recv()
 		return "ERR";
 	else
 		buf[ocr] = 0;
-	std::cout << "Recv[" << std::string((char*)&buf) << "]" << std::endl;
+	//std::cout << "Recv[" << std::string((char*)&buf) << "]" << std::endl;
 	return std::string((char*)&buf);
 }
 
