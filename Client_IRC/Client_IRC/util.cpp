@@ -1,10 +1,5 @@
 #include "util.h"
 
-void util::Fonction1()
-{
-}
-
-
-void util::Fonction2()
+void util::Util()
 {
 }
