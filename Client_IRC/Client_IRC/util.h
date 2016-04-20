@@ -1,5 +1,6 @@
 #pragma once
+#include <string>
 namespace util
 {
-	void Util();
+	int	takeNbr(std::string);
 }

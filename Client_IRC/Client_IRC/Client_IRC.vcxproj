@@ -121,6 +121,7 @@
     <ClCompile Include="clientIrc.cpp" />
     <ClCompile Include="irc_net.cpp" />
     <ClCompile Include="main.cpp" />
+    <ClCompile Include="MessageManager.cpp" />
     <ClCompile Include="reseau_cli.cpp" />
     <ClCompile Include="threadInput.cpp" />
     <ClCompile Include="util.cpp" />
@@ -128,6 +129,7 @@
   <ItemGroup>
     <ClInclude Include="clientIrc.h" />
     <ClInclude Include="irc_net.h" />
+    <ClInclude Include="MessageManager.h" />
     <ClInclude Include="reseau_cli.h" />
     <ClInclude Include="threadInput.h" />
     <ClInclude Include="util.h" />

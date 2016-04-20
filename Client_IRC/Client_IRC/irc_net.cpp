@@ -22,7 +22,7 @@ bool irc_net::connect(std::string nickname, std::string hostname, std::string us
 	Send(nickReq);
 	Send(userkReq);
 	
-	std::cout << "Ret connect[" << Recv() << "]" << std::endl;
+	//std::cout << "Ret connect[" << Recv() << "]" << std::endl;
 
 	return true;
 }
