@@ -122,11 +122,13 @@
     <ClCompile Include="irc_net.cpp" />
     <ClCompile Include="main.cpp" />
     <ClCompile Include="reseau_cli.cpp" />
+    <ClCompile Include="threadInput.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="clientIrc.h" />
     <ClInclude Include="irc_net.h" />
     <ClInclude Include="reseau_cli.h" />
+    <ClInclude Include="threadInput.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

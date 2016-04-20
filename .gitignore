@@ -2,3 +2,4 @@ Client_IRC/Client_IRC.opensdf
 Client_IRC/Debug/Client_IRC.pdb
 Client_IRC/Debug/Client_IRC.exe
 Client_IRC/Debug/Client_IRC.ilk
+*.tlog

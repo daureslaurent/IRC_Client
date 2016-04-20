@@ -2,18 +2,29 @@
 #include "threadInput.h"
 #include <thread>
 
+#include "util.h"
 
 bool clientIrc::Init()
 {
-	std::cout << "Client IRC(WIN/UNIX)" << std::endl;
-	// Get host:ip
-	if (!_net.Init("irc.ircube.org", 6667))
+	Asknet();
+	if (!_net.Init(_addr, _port))
 		return false;
 	return true;
 }
 
+void	clientIrc::Asknet()
+{
+	std::string port;
+	std::cout << "Enter adresse :";
+	std::cin >> _addr;
+	std::cout << "Enter port :";
+	std::cin >> port;
+	_port = std::atoi(port.c_str());
+}
+
 bool clientIrc::checkCmd(std::string inData)
 {
+	ns::Fonction1();
 	if (!inData.compare(0, 5, "PING "))
 	{
 		inData.erase(inData.size() - 2, 2);
@@ -23,7 +34,6 @@ bool clientIrc::checkCmd(std::string inData)
 	}
 	else
 	{
-		//std::cout << "\r" << output << padding << "\n" << currentinput;
 		std::cout << "-> " << inData << std::endl;
 	}
 	return false;

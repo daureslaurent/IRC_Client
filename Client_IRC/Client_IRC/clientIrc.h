@@ -4,10 +4,13 @@
 class clientIrc
 {
 private:
-	irc_net	_net;
+	irc_net		_net;
+	int			_port;
+	std::string	_addr;
 
 	bool	Init();
 	bool	checkCmd(std::string inData);
+	void	Asknet();
 
 public:
 	clientIrc();
