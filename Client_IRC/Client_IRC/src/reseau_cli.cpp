@@ -21,7 +21,7 @@ bool reseau::Init(std::string addr, int port)
 	}
 #endif
 
-	socklen_t		cl_sock;
+	int		cl_sock;
 	struct sockaddr_in cl_addr;
 	struct hostent *hostinfo;
 

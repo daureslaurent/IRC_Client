@@ -4,11 +4,25 @@
 
 bool threadInput::checkCmd(std::string inData)
 {
-	std::cout << "In[" << inData << "]" << std::endl;
 	if ((inData.size() >= 1) && (inData[0] != '/'))
-	{
-		std::cout << "Send msg" << std::endl;
 		_net.Send(inData + "\r\n");
+	else if (inData[0] == '/')
+	{
+		inData.erase(inData.begin());
+		size_t f0 = inData.find(" ");
+		std::string cmd;
+		std::string end = "";
+		if (f0 != std::string::npos)
+		{
+			cmd = inData.substr(0, f0);
+			end = inData.substr(f0);
+		}
+		else
+			cmd = inData;
+
+		for (size_t i = 0; i < cmd.size(); i++)
+			cmd[i] = toupper(cmd[i]);
+		_net.Send(cmd + end + "\r\n");
 	}
 	return true;
 }
