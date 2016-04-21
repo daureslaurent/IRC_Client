@@ -20,7 +20,8 @@ bool reseau::Init(std::string addr, int port)
 		return false;
 	}
 #endif
-	int		cl_sock;
+
+	socklen_t		cl_sock;
 	struct sockaddr_in cl_addr;
 	struct hostent *hostinfo;
 
@@ -68,7 +69,11 @@ std::string reseau::Recv()
 	char	buf[MAX_BUF];
 	int ocr;
 	struct sockaddr_in client;
+#ifdef _WIN32
 	int		sock_l = sizeof(client);
+#else
+	socklen_t		sock_l = sizeof(client);
+#endif
 
 	ocr = recvfrom(_socket, (char*)&buf, MAX_BUF-1, 0, (sockaddr*)&client, &sock_l);
 	if (ocr == -1)
@@ -81,8 +86,12 @@ std::string reseau::Recv()
 
 void reseau::close_net()
 {
+#ifdef _WIN32
 	closesocket(_socket);
-	//WSACleanup();
+	WSACleanup();
+#else
+	close(_socket);
+#endif
 }
 
 int reseau::string_to_int(std::string req, std::string end)
