@@ -54,7 +54,6 @@ void threadInput::Dojob()
 	while (_exit)
 	{
 		char	buf[1024];
-		int		end;
 		std::cin.getline(buf, 1024);
 		checkCmd(std::string(buf));
 	}
