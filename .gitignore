@@ -5,3 +5,8 @@ Client_IRC/Debug/Client_IRC.ilk
 *.tlog
 *.pdb
 *.tlog
+*.exe
+*.ilk
+*.sdf
+*.sln
+*.dgml
