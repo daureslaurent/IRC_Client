@@ -1,3 +1,3 @@
 # IRC_Client
 
-Win/Linux
+Support Win/Linux
