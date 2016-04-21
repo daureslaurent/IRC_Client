@@ -1,0 +1,3 @@
+-Test many Irc serveur
+-Enter nickname - username - pass
+-Add PASS in connect
