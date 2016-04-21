@@ -62,12 +62,12 @@ bool clientIrc::Run()
 	if (_net.connect("nickname123", "hostnamelo", "lolodudidi", "servname", "Real Name"))
 	{
 		thinput.start(_net);
-		while (true)
+		while (thinput.getEtat())
 		{
-
 			_msgman.parse(_net.Recv());
 			while (_msgman.getLoop())
 				checkCmd(_msgman.exec());
 		}
 	}
+	thinput.stop();
 }
