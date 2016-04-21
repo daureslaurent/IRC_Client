@@ -2,7 +2,6 @@
 #include "irc_net.h"
 #include "MessageManager.h"
 #include <string>
-#include "util.h"
 #include <thread>
 #include "threadInput.h"
 

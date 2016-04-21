@@ -8,7 +8,5 @@ int	main(int ac, char **av)
 
 	irc.Run();
 
-	system("Pause");
-
 	return 0;
 }
