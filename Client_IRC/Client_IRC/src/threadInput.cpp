@@ -30,6 +30,13 @@ bool threadInput::checkCmd(std::string inData)
 			cmd[i] = toupper(cmd[i]);
 		_net.Send(cmd + end + "\r\n");
 	}
+	else //Send msg to target
+	{
+		std::string req = "PRIVMSG ";
+		req += "Target ";
+		req += inData + "\r\n";
+		_net.Send(req);
+	}
 	return true;
 }
 
@@ -63,8 +70,8 @@ void threadInput::Dojob()
 
 	while (exit)
 	{
-		char	buf[1024];
-		std::cin.getline(buf, 1024);
+		char	buf[512];
+		std::cin.getline(buf, 512);
 		checkCmd(std::string(buf));
 		_mut.lock();
 		exit = _exit;

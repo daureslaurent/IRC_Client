@@ -25,7 +25,6 @@ bool reseau::Init(std::string addr, int port)
 	struct sockaddr_in cl_addr;
 	struct hostent *hostinfo;
 
-	std::cout << "Create Socket" << std::endl;
 	//Create socket
 	if ((cl_sock = socket(AF_INET, SOCK_STREAM, 0)) == -1)
 	{
@@ -35,8 +34,6 @@ bool reseau::Init(std::string addr, int port)
 	//Get Hostinfo
 	hostinfo = gethostbyname(addr.c_str());
 
-	std::cout << "Set client" << std::endl;
-
 	//Fill out the local socket addr info
 	cl_addr.sin_family = AF_INET;
 	if (hostinfo == NULL)
@@ -44,14 +41,12 @@ bool reseau::Init(std::string addr, int port)
 	else
 		cl_addr.sin_addr = *(in_addr *)hostinfo->h_addr;
 	cl_addr.sin_port = htons(port);
-	std::cout << "Connect to " << addr << ":" << port << std::endl;
 
 	size_t	server_len = sizeof(cl_addr);
 
 	if (connect(cl_sock, (sockaddr *)&cl_addr, server_len) == -1)
 	{
 		std::cout << "Erreur Conect" << std::endl;
-		perror("connect()");
 		return false;
 	}
 	_socket = cl_sock;
@@ -60,7 +55,7 @@ bool reseau::Init(std::string addr, int port)
 
 void reseau::Send(std::string msg)
 {
-	std::cout << "Send[" << msg << "]" << std::endl;
+	//std::cout << "Send[" << msg << "]" << std::endl;
 	sendto(_socket, msg.c_str(), msg.size(), 0, (struct sockaddr *)&_serv, sizeof(_serv));
 }
 

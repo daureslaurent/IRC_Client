@@ -2,6 +2,8 @@
 #include "reseau_cli.h"
 
 #include <string>
+#include <thread>
+#include <chrono>
 
 class irc_net : public reseau
 {

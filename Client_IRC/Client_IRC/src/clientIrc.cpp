@@ -3,20 +3,13 @@
 
 bool clientIrc::Init()
 {
-	Asknet();
-	if (!_net.Init(_addr, _port))
+	_me.run();
+	if (!_net.Init(_me.getAddr(), _me.getPort()))
+	{
+		std::cout << "Connect to " << _me.getAddr() << std::endl;
 		return false;
+	}
 	return true;
-}
-
-void	clientIrc::Asknet()
-{
-	std::string port;
-	std::cout << "Enter adresse :";
-	std::cin >> _addr;
-	std::cout << "Enter port :";
-	std::cin >> port;
-	_port = std::atoi(port.c_str());
 }
 
 bool clientIrc::checkCmd(Message msg)
@@ -40,7 +33,7 @@ bool clientIrc::checkCmd(Message msg)
 		std::cout << "Liste des utilisateurs: " << msg.data.substr(msg.data.find_last_of(":")) << std::endl;
 	else if (msg.headCode == 1001)
 		std::cout << msg.from << "->" << msg.to << ":" << msg.data << std::endl;
-	else
+	else if (DEBUG)
 		std::cout << msg.headCode << "..>" << msg.data << std::endl;
 	return false;
 }

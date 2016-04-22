@@ -4,12 +4,14 @@
 #include <string>
 #include <thread>
 #include "threadInput.h"
-
+#include "Me.h"
+#define	DEBUG	false
 
 class clientIrc
 {
 private:
 	irc_net		_net;
+	Me			_me;
 	int			_port;
 	std::string	_addr;
 	threadInput thinput;
