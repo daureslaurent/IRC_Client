@@ -49,27 +49,53 @@ void Me::newNet()
 
 void Me::askMe()
 {
-	if (_lserv.size() > 0)
+	if (_lme.size() > 0)
 	{
 		std::cout << "Config user list:" << std::endl;
-
 		for (size_t i = 0; i < _lme.size(); i++)
-			std::cout << "[" << i << "] " << _lme[i]._addr << std::endl;
-		std::cout << "Choose the target server [nb]: ";
+		{
+			std::cout << "[" << i << "] " << _lme[i]._nickname;
+			std::cout << " - " << _lme[i]._username;
+			std::cout << " - " << _lme[i]._realname << std::endl;
+		}
+		std::cout << "Choose your config[nb]: ";
 		std::string	sSelec;
 		int			selec;
 		std::cin >> sSelec;
 		selec = std::atoi(sSelec.c_str());
 		if (selec >= 0 && selec <= _lme.size())
 		{
-			_addr = _lme[selec]._addr;
-			_port = _lme[selec]._port;
+			_nickname = _lme[selec]._nickname;
+			_username = _lme[selec]._username;
+			_realname = _lme[selec]._realname;
 		}
 		else
-			newNet();
+			newMe();
 	}
 	else
-		newNet();
+		newMe();
+}
+
+void Me::newMe()
+{
+	std::string nickname, username, realname, save;
+	std::cout << "Enter your nickname :";
+	std::cin >> nickname;
+	std::cout << "Enter your username :";
+	std::cin >> username;
+	std::cout << "Enter your realname :";
+	std::cin >> realname;
+	std::cout << "Do you want save ? [Y/N] :";
+	std::cin >> save;
+	if (save[0] == 'y' || save[0] == 'Y')
+	{
+		Mefile me;
+		me._nickname = nickname;
+		me._username = username;
+		me._realname = realname;
+		_lme.push_back(me);
+		std::cout << "Save !" << std::endl;
+	}
 }
 
 Me::Me()
@@ -83,8 +109,8 @@ Me::~Me()
 
 void Me::run()
 {
-	std::cout << "Me obj:" << std::endl;
 	askNet();
+	askMe();
 	system("cls");
 	//Clean screen
 }
@@ -97,4 +123,29 @@ std::string Me::getAddr()
 int Me::getPort()
 {
 	return _port;
+}
+
+std::string Me::getNick()
+{
+	return _nickname;
+}
+
+std::string Me::getHostName()
+{
+	return "Hostname";
+}
+
+std::string Me::getUserName()
+{
+	return _username;
+}
+
+std::string Me::getServName()
+{
+	return "Servname";
+}
+
+std::string Me::getRealName()
+{
+	return _realname;
 }

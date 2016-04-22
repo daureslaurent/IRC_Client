@@ -52,7 +52,7 @@ bool clientIrc::Run()
 	if (!Init())
 		return false;
 
-	if (_net.connect("nickname123", "hostnamelo", "lolodudidi", "servname", "Real Name"))
+	if (_net.connect(_me.getNick(), _me.getHostName(), _me.getUserName(), _me.getServName(), _me.getRealName()) )
 	{
 		thinput.start(_net);
 		while (thinput.getEtat())

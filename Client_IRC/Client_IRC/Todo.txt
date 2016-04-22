@@ -1,3 +1,2 @@
--Test many Irc serveur
--Enter nickname - username - pass
 -Add PASS in connect
+-Save/Load BDD Me.cpp

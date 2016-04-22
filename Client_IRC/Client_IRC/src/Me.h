@@ -23,7 +23,7 @@ class Me
 private:
 	/* BDD */
 	std::vector<Server> _lserv;
-	std::vector<Server> _lme;
+	std::vector<Mefile> _lme;
 	void				save();
 	void				load();
 	/* Net arg */
@@ -35,10 +35,9 @@ private:
 	/* Me arg */
 	std::string	_nickname;
 	std::string	_username;
-	std::string	_hostname;
-	std::string	_servname;
 	std::string	_realname;
 	void	askMe();
+	void	newMe();
 
 public:
 	Me();
@@ -46,5 +45,10 @@ public:
 	void	run();
 	std::string	getAddr();
 	int			getPort();
+	std::string	getNick();
+	std::string	getHostName();
+	std::string	getUserName();
+	std::string	getServName();
+	std::string	getRealName();
 };
 
