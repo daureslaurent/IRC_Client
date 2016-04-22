@@ -19,7 +19,6 @@ private:
 
 	bool	Init();
 	bool	checkCmd(Message inData);
-	void	Asknet();
 
 public:
 	clientIrc();

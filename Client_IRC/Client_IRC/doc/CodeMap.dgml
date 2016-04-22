@@ -1,20 +1,20 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<DirectedGraph DataVirtualized="True" xmlns="http://schemas.microsoft.com/vs/2009/dgml">
+<DirectedGraph DataVirtualized="True" GraphDirection="LeftToRight" Layout="ForceDirected" ZoomLevel="-1" xmlns="http://schemas.microsoft.com/vs/2009/dgml">
   <Nodes>
-    <Node Id="@10" Category="CodeSchema_Class" Bounds="-237.655210646162,62.6926869688713,123.373333333333,25" DelayedChildNodesState="NotFetched" DelayedCrossGroupLinksState="Fetched" Group="Collapsed" Label="threadInput" Language="{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}" />
-    <Node Id="@3" Category="CodeSchema_Namespace" Bounds="-257.655210646162,-67.3073130311287,443.686666666667,285" DelayedChildNodesState="Incomplete" DelayedCrossGroupLinksState="Fetched" FetchedChildrenCount="10" Group="Expanded" Label="Client IRC" Language="{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}" UseManualLocation="True" />
-    <Node Id="@4" Category="CodeSchema_Method" Bounds="-51.4685439794958,-27.3073130311287,1,1" DelayedCrossGroupLinksState="Fetched" Label="main" Language="{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}" />
-    <Node Id="@5" Category="CodeSchema_Class" Bounds="-102.168543979496,7.6926869688713,102.4,25" DelayedChildNodesState="NotFetched" DelayedCrossGroupLinksState="Fetched" Group="Collapsed" Label="clientIrc" Language="{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}" />
-    <Node Id="@6" Category="CodeSchema_Class" Bounds="-130.836877312829,117.692686968871,95.7366666666667,25" DelayedChildNodesState="NotFetched" DelayedCrossGroupLinksState="Fetched" Group="Collapsed" Label="irc_net" Language="{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}" />
-    <Node Id="@7" Category="CodeSchema_Class" Bounds="-4.81354397949571,117.692686968871,107.69,25" DelayedChildNodesState="NotFetched" DelayedCrossGroupLinksState="Fetched" Group="Collapsed" Label="Message" Language="{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}" />
-    <Node Id="@8" Category="CodeSchema_Class" Bounds="-20.4618773128291,62.6926869688713,154.986666666667,25" DelayedChildNodesState="NotFetched" DelayedCrossGroupLinksState="Fetched" Group="Collapsed" Label="MessageManager" Language="{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}" />
-    <Node Id="@9" Category="CodeSchema_Class" Bounds="-130.826877312829,172.692686968871,95.7166666666667,25" DelayedChildNodesState="NotFetched" DelayedCrossGroupLinksState="Fetched" Group="Collapsed" Label="reseau" Language="{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}" />
+    <Node Id="@10" Category="CodeSchema_Class" Bounds="223.232204154285,165.277174946984,123.373333333333,25" DelayedChildNodesState="NotFetched" DelayedCrossGroupLinksState="Fetched" Group="Collapsed" Label="threadInput" Language="{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}" />
+    <Node Id="@3" Category="CodeSchema_Namespace" Bounds="0,0,405.826866666667,265.277174946984" DelayedChildNodesState="Incomplete" DelayedCrossGroupLinksState="Fetched" FetchedChildrenCount="10" Group="Expanded" Label="Client IRC" Language="{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}" />
+    <Node Id="@4" Category="CodeSchema_Method" Bounds="138.254168347539,40,62.14,25.96" DelayedCrossGroupLinksState="Fetched" Label="main" Language="{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}" />
+    <Node Id="@5" Category="CodeSchema_Class" Bounds="157.6901,110.277174946984,102.4,25" DelayedChildNodesState="NotFetched" DelayedCrossGroupLinksState="Fetched" Group="Collapsed" Label="clientIrc" Language="{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}" />
+    <Node Id="@6" Category="CodeSchema_Class" Bounds="290.0902,110.277174946984,95.7366666666667,25" DelayedChildNodesState="NotFetched" DelayedCrossGroupLinksState="Fetched" Group="Collapsed" Label="irc_net" Language="{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}" />
+    <Node Id="@7" Category="CodeSchema_Class" Bounds="20,153.649777122142,107.69,25" DelayedChildNodesState="NotFetched" DelayedCrossGroupLinksState="Fetched" Group="Collapsed" Label="Message" Language="{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}" />
+    <Node Id="@8" Category="CodeSchema_Class" Bounds="66.2460757434473,220.277174946984,154.986666666667,25" DelayedChildNodesState="NotFetched" DelayedCrossGroupLinksState="Fetched" Group="Collapsed" Label="MessageManager" Language="{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}" />
+    <Node Id="@9" Category="CodeSchema_Class" Bounds="236.04171315884,55.2771749469835,95.7166666666667,25" DelayedChildNodesState="NotFetched" DelayedCrossGroupLinksState="Fetched" Group="Collapsed" Label="reseau" Language="{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}" />
   </Nodes>
   <Links>
-    <Link Source="@10" Target="@6" Category="References" Bounds="-154.832183837891,87.6926879882813,42.980598449707,25.4186325073242" IsSourceVirtualized="True" IsTargetVirtualized="True" Language="{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}" Weight="7">
+    <Link Source="@10" Target="@6" Category="References" Bounds="296.973339573766,141.75554122717,22.6832638952504,23.5216337198137" IsSourceVirtualized="True" IsTargetVirtualized="True" Language="{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}" Weight="7">
       <Category Ref="CodeSchema_Calls" />
     </Link>
-    <Link Source="@10" Target="@9" Category="CodeSchema_Calls" Bounds="-172.786727905273,87.6926879882813,64.4773941040039,79.8576812744141" IsSourceVirtualized="True" IsTargetVirtualized="True" Language="{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}" Weight="1" />
+    <Link Source="@10" Target="@9" Category="CodeSchema_Calls" Bounds="284.099176763019,89.2767889376404,0.703918566025948,76.0003860093431" IsSourceVirtualized="True" IsTargetVirtualized="True" Language="{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}" Weight="1" />
     <Link Source="@3" Target="@10" Category="Contains" FetchingParent="@3" />
     <Link Source="@3" Target="@4" Category="Contains" FetchingParent="@3" />
     <Link Source="@3" Target="@5" Category="Contains" FetchingParent="@3" />
@@ -22,26 +22,26 @@
     <Link Source="@3" Target="@7" Category="Contains" FetchingParent="@3" />
     <Link Source="@3" Target="@8" Category="Contains" FetchingParent="@3" />
     <Link Source="@3" Target="@9" Category="Contains" FetchingParent="@3" />
-    <Link Source="@4" Target="@5" Category="References" Bounds="-50.9685440063477,-26.3073139190674,0,25.000000834465" IsTargetVirtualized="True" Language="{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}" Weight="5">
+    <Link Source="@4" Target="@5" Category="References" Bounds="176.682142266097,65.9600000000001,20.6837627193252,36.4876585685768" IsTargetVirtualized="True" Language="{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}" Weight="5">
       <Category Ref="CodeSchema_Calls" />
     </Link>
-    <Link Source="@5" Target="@10" Category="References" Bounds="-139.321624755859,32.6926879882813,59.9439926147461,26.3753509521484" IsSourceVirtualized="True" IsTargetVirtualized="True" Language="{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}" Weight="5">
+    <Link Source="@5" Target="@10" Category="References" Bounds="226.169366095671,135.277174946984,34.1782400509748,24.7248927281826" IsSourceVirtualized="True" IsTargetVirtualized="True" Language="{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}" Weight="5">
       <Category Ref="CodeSchema_Calls" />
     </Link>
-    <Link Source="@5" Target="@6" Category="References" Bounds="-82.9685440063477,32.6926879882813,24.7272720336914,76" IsSourceVirtualized="True" IsTargetVirtualized="True" Language="{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}" Weight="5">
+    <Link Source="@5" Target="@6" Category="References" Bounds="260.0901,122.777174946984,21.0000999999998,0" IsSourceVirtualized="True" IsTargetVirtualized="True" Language="{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}" Weight="5">
       <Category Ref="CodeSchema_Calls" />
     </Link>
-    <Link Source="@5" Target="@7" Category="References" Bounds="-50.9685440063477,32.6926879882813,69.3867835998535,80.662727355957" IsSourceVirtualized="True" IsTargetVirtualized="True" Language="{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}" Weight="4">
+    <Link Source="@5" Target="@7" Category="References" Bounds="121.333947017636,135.277174946984,48.6361051793105,15.6205181920071" IsSourceVirtualized="True" IsTargetVirtualized="True" Language="{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}" Weight="4">
       <Category Ref="CodeSchema_Calls" />
     </Link>
-    <Link Source="@5" Target="@8" Category="References" Bounds="-26.4230899810791,32.6926879882813,50.8891696929932,25.9157791137695" IsSourceVirtualized="True" IsTargetVirtualized="True" Language="{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}" Weight="7">
+    <Link Source="@5" Target="@8" Category="References" Bounds="155.729320883469,135.277174946984,45.7572915116199,77.2563114059673" IsSourceVirtualized="True" IsTargetVirtualized="True" Language="{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}" Weight="7">
       <Category Ref="CodeSchema_Calls" />
     </Link>
-    <Link Source="@5" Target="@9" Category="CodeSchema_Calls" Bounds="-27.2556476593018,29.9360752105713,192.287111282349,142.900930404663" IsSourceVirtualized="True" IsTargetVirtualized="True" Language="{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}" Weight="3" />
-    <Link Source="@6" Target="@9" Category="CodeSchema_Calls" Bounds="-82.9685440063477,142.692687988281,0,21" IsSourceVirtualized="True" IsTargetVirtualized="True" Language="{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}" Weight="6">
+    <Link Source="@5" Target="@9" Category="CodeSchema_Calls" Bounds="225.937815111858,85.5989889490355,33.6565347496362,24.678185997948" IsSourceVirtualized="True" IsTargetVirtualized="True" Language="{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}" Weight="3" />
+    <Link Source="@6" Target="@9" Category="CodeSchema_Calls" Bounds="302.494851433915,86.6958375207398,23.1776621627918,23.5813374262438" IsSourceVirtualized="True" IsTargetVirtualized="True" Language="{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}" Weight="6">
       <Category Ref="CodeSchema_BasedOn" />
     </Link>
-    <Link Source="@8" Target="@7" Category="References" Bounds="52.1450958251953,87.6926879882813,3.06818008422852,21.0937194824219" IsSourceVirtualized="True" IsTargetVirtualized="True" Language="{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}" Weight="10">
+    <Link Source="@8" Target="@7" Category="References" Bounds="93.472313332192,184.859668669837,37.1541701016479,35.4175062771464" IsSourceVirtualized="True" IsTargetVirtualized="True" Language="{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}" Weight="10">
       <Category Ref="CodeSchema_Calls" />
     </Link>
   </Links>
@@ -67,6 +67,7 @@
     <Property Id="Expression" DataType="System.String" />
     <Property Id="FetchedChildrenCount" DataType="System.Int32" />
     <Property Id="FetchingParent" DataType="Microsoft.VisualStudio.GraphModel.GraphNodeId" />
+    <Property Id="GraphDirection" DataType="Microsoft.VisualStudio.Diagrams.Layout.LayoutOrientation" />
     <Property Id="Group" Label="Groupe" Description="Affiche le nœud en tant que groupe" DataType="Microsoft.VisualStudio.GraphModel.GraphGroupStyle" />
     <Property Id="GroupLabel" DataType="System.String" />
     <Property Id="Icon" Label="Icône" Description="Icône" DataType="System.String" />
@@ -77,14 +78,16 @@
     <Property Id="IsTargetVirtualized" Label="Cible du lien virtualisée" Description="Si la valeur est True, l'extrémité cible du lien contient des données pour les nœuds/liens virtualisés (c'est-à-dire, non réellement créés dans le graphique)." DataType="System.Boolean" />
     <Property Id="Label" Label="Étiquette" Description="Étiquette affichable d'un objet pouvant être annoté" DataType="System.String" />
     <Property Id="Language" Label="Langage" Description="Langage" DataType="System.String" />
+    <Property Id="Layout" DataType="System.String" />
     <Property Id="NavigationActionLabel" Label="NavigationActionLabel" Description="NavigationActionLabel" DataType="System.String" />
     <Property Id="OutgoingActionLabel" Label="OutgoingActionLabel" Description="OutgoingActionLabel" DataType="System.String" />
     <Property Id="TargetType" DataType="System.Type" />
-    <Property Id="UseManualLocation" DataType="System.Boolean" />
+    <Property Id="ToolTip" DataType="System.String" />
     <Property Id="Value" DataType="System.String" />
     <Property Id="ValueLabel" DataType="System.String" />
     <Property Id="Visibility" Label="Visibility" Description="Defines whether a node in the graph is visible or not" DataType="System.Windows.Visibility" />
     <Property Id="Weight" Label="Épaisseur" Description="Épaisseur" DataType="System.Double" />
+    <Property Id="ZoomLevel" DataType="System.String" />
   </Properties>
   <QualifiedNames>
     <Name Id="Assembly" Label="Assembly" ValueType="Uri" />
@@ -105,6 +108,16 @@
     <Alias n="10" Id="(@1 @2 Type=threadInput)" />
   </IdentifierAliases>
   <Styles>
+    <Style TargetType="Node" GroupLabel="Références circulaires" ToolTip="Le nœud fait partie d'un composant fortement couplé" ValueLabel="Nœuds">
+      <Condition Expression="IsStronglyConnected" />
+      <Setter Property="Stroke" Value="#D02030" />
+      <Setter Property="StrokeThickness" Value="2" />
+    </Style>
+    <Style TargetType="Link" GroupLabel="Références circulaires" ToolTip="Le nœud fait partie d'un composant fortement couplé" ValueLabel="Liens">
+      <Condition Expression="IsCircularLink" />
+      <Setter Property="Stroke" Value="#D02030" />
+      <Setter Property="StrokeThickness" Value="2" />
+    </Style>
     <Style TargetType="Node" GroupLabel="Résultats" ValueLabel="Vrai">
       <Condition Expression="HasCategory('QueryResult')" />
       <Setter Property="Background" Value="#FFBCFFBE" />

@@ -9,7 +9,6 @@ public:
 	std::string	_addr;
 	int			_port;
 };
-
 class Mefile
 {
 public:
