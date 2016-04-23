@@ -96,6 +96,9 @@ void Me::newMe()
 		_lme.push_back(me);
 		std::cout << "Save !" << std::endl;
 	}
+	_nickname = nickname;
+	_username = username;
+	_realname = realname;
 }
 
 Me::Me()
@@ -132,7 +135,7 @@ std::string Me::getNick()
 
 std::string Me::getHostName()
 {
-	return "Hostname";
+	return "bothost";
 }
 
 std::string Me::getUserName()
@@ -142,7 +145,7 @@ std::string Me::getUserName()
 
 std::string Me::getServName()
 {
-	return "Servname";
+	return "ircname";
 }
 
 std::string Me::getRealName()

@@ -55,7 +55,7 @@ bool reseau::Init(std::string addr, int port)
 
 void reseau::Send(std::string msg)
 {
-	//std::cout << "Send[" << msg << "]" << std::endl;
+	std::cout << "Send[" << msg << "]" << std::endl;
 	sendto(_socket, msg.c_str(), msg.size(), 0, (struct sockaddr *)&_serv, sizeof(_serv));
 }
 

@@ -33,6 +33,8 @@ bool clientIrc::checkCmd(Message msg)
 		std::cout << "Liste des utilisateurs: " << msg.data.substr(msg.data.find_last_of(":")) << std::endl;
 	else if (msg.headCode == 1001)
 		std::cout << msg.from << "->" << msg.to << ":" << msg.data << std::endl;
+	else if (msg.headCode == 433)
+		std::cout << "Nickname in use :/" << std::endl;
 	else if (DEBUG)
 		std::cout << msg.headCode << "..>" << msg.data << std::endl;
 	return false;
@@ -52,7 +54,7 @@ bool clientIrc::Run()
 	if (!Init())
 		return false;
 
-	if (_net.connect(_me.getNick(), _me.getHostName(), _me.getUserName(), _me.getServName(), _me.getRealName()) )
+	if (_net.connect(_me.getNick(), _me.getHostName(), _me.getUserName(), _me.getServName(), _me.getRealName(), "p") )
 	{
 		thinput.start(_net);
 		while (thinput.getEtat())
