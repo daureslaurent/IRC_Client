@@ -4,9 +4,10 @@
 
 int	main(int ac, char **av)
 {
+	(void)ac;
+	(void)av;
+
 	clientIrc irc;
 	irc.Run();
-
-	system("PAUSE");
 	return 0;
 }
