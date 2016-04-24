@@ -8,6 +8,7 @@ SRCS	=		$(DIR)main.cpp \
 				$(DIR)MessageManager.cpp \
 				$(DIR)reseau_cli.cpp \
 				$(DIR)threadInput.cpp \
+				$(DIR)Me.cpp \
 				$(DIR)util.cpp
 
 OBJS	=	$(SRCS:.cpp=.o)

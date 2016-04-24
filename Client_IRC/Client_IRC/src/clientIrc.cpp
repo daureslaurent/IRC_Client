@@ -22,7 +22,7 @@ bool clientIrc::checkCmd(Message msg)
 	}
 	else if (msg.data.find("JOIN") != std::string::npos)
 	{
-		std::string channel = msg.data.substr(msg.data.find_last_of(":"));
+		std::string channel = msg.data.substr(msg.data.find_last_of(":") + 1);
 		std::cout << "Channel " << channel << " join" << std::endl;
 		thinput.setTarget(channel);
 	}
@@ -55,7 +55,7 @@ bool clientIrc::Run()
 	if (!Init())
 		return false;
 
-	if (_net.connect(_me.getNick(), _me.getHostName(), _me.getUserName(), _me.getServName(), _me.getRealName(), _me.getPassword()) )
+	if (_net.connect(_me.getNick(), _me.getHostName(), _me.getUserName(), _me.getServName(), _me.getRealName(), _me.getPassword()))
 	{
 		thinput.start(_net);
 		while (thinput.getEtat())

@@ -27,11 +27,12 @@ void MessageManager::parse(std::string data)
 			if (line.find("PRIVMSG") != std::string::npos)
 			{
 				line.erase(line.begin());
-				std::string from = line.substr(0, line.find(" "));
+				std::string from = line.substr(0, line.find("!"));
 				newelem.from = from;
-				std::string to = line.substr(line.find("PRIVMSG")+8, line.find(":")-1);
+				std::string to = line.substr(line.find("PRIVMSG") + 8, (line.find(":") - 1) - (line.find("PRIVMSG") + 8));
 				newelem.to = to;
-				std::string msg = line.substr(line.find(":"));
+				std::string msg = line.substr(line.find(":") + 1);
+				std::cout << "from[" << from << "]to[" << to << "]msg[" << msg << "]" << std::endl;
 				newelem.data = msg;
 				newelem.headCode = 1001;
 			}
