@@ -5,8 +5,12 @@
 bool threadInput::checkCmd(std::string inData)
 {
 	if ((inData.size() >= 1) && (inData[0] != '/'))
-		_net.Send(inData + "\r\n");
-	
+	{
+		std::string req = "PRIVMSG ";
+		req += _target + " ";
+		req += inData + "\r\n";
+		_net.Send(req);
+	}
 	else if (!inData.compare("/quit"))
 	{
 		_net.Send("QUIT\r\n");
@@ -29,13 +33,6 @@ bool threadInput::checkCmd(std::string inData)
 		for (size_t i = 0; i < cmd.size(); i++)
 			cmd[i] = toupper(cmd[i]);
 		_net.Send(cmd + end + "\r\n");
-	}
-	else //Send msg to target
-	{
-		std::string req = "PRIVMSG ";
-		req += "Target ";
-		req += inData + "\r\n";
-		_net.Send(req);
 	}
 	return true;
 }
@@ -86,4 +83,9 @@ bool threadInput::getEtat()
 	ret = _exit;
 	_mut.unlock();
 	return ret;
+}
+
+void threadInput::setTarget(std::string target)
+{
+	_target = target;
 }

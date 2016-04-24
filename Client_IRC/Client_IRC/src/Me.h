@@ -3,6 +3,8 @@
 #include <string>
 #include <vector>
 
+#define	SAVE_ENGINE	false
+
 class Server
 {
 public:
@@ -35,6 +37,7 @@ private:
 	std::string	_nickname;
 	std::string	_username;
 	std::string	_realname;
+	std::string	_password;
 	void	askMe();
 	void	newMe();
 
@@ -49,5 +52,6 @@ public:
 	std::string	getUserName();
 	std::string	getServName();
 	std::string	getRealName();
+	std::string	getPassword();
 };
 

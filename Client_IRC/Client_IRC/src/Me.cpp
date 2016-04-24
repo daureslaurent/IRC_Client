@@ -35,15 +35,18 @@ void Me::newNet()
 	std::cout << "Enter port :";
 	std::cin >> sPort;
 	_port = std::atoi(sPort.c_str());
-	std::cout << "Do you want save ? [Y/N] :";
-	std::cin >> save;
-	if (save[0] == 'y' || save[0] == 'Y')
+	if (SAVE_ENGINE)
 	{
-		Server serv;
-		serv._addr = sAddr;
-		serv._port = _port;
-		_lserv.push_back(serv);
-		std::cout << "Save !" << std::endl;
+		std::cout << "Do you want save ? [Y/N] :";
+		std::cin >> save;
+		if (save[0] == 'y' || save[0] == 'Y')
+		{
+			Server serv;
+			serv._addr = sAddr;
+			serv._port = _port;
+			_lserv.push_back(serv);
+			std::cout << "Save !" << std::endl;
+		}
 	}
 }
 
@@ -74,6 +77,8 @@ void Me::askMe()
 	}
 	else
 		newMe();
+	std::cout << "Enter your password [If none enter 'n' or 'N']" << std::endl;
+	std::cin >> _password;
 }
 
 void Me::newMe()
@@ -85,16 +90,19 @@ void Me::newMe()
 	std::cin >> username;
 	std::cout << "Enter your realname :";
 	std::cin >> realname;
-	std::cout << "Do you want save ? [Y/N] :";
-	std::cin >> save;
-	if (save[0] == 'y' || save[0] == 'Y')
+	if (SAVE_ENGINE)
 	{
-		Mefile me;
-		me._nickname = nickname;
-		me._username = username;
-		me._realname = realname;
-		_lme.push_back(me);
-		std::cout << "Save !" << std::endl;
+		std::cout << "Do you want save ? [Y/N] :";
+		std::cin >> save;
+		if (save[0] == 'y' || save[0] == 'Y')
+		{
+			Mefile me;
+			me._nickname = nickname;
+			me._username = username;
+			me._realname = realname;
+			_lme.push_back(me);
+			std::cout << "Save !" << std::endl;
+		}
 	}
 	_nickname = nickname;
 	_username = username;
@@ -151,4 +159,9 @@ std::string Me::getServName()
 std::string Me::getRealName()
 {
 	return _realname;
+}
+
+std::string Me::getPassword()
+{
+	return _password;
 }

@@ -5,7 +5,7 @@
 #include <thread>
 #include "threadInput.h"
 #include "Me.h"
-#define	DEBUG	false
+#define	DEBUG	true
 
 class clientIrc
 {

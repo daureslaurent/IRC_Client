@@ -12,7 +12,8 @@ private:
 	bool		_exit;
 	irc_net		_net;
 	std::mutex	_mut;
-
+	
+	std::string	_target;
 	bool	checkCmd(std::string);
 public:
 	threadInput();
@@ -22,5 +23,6 @@ public:
 	void	stop();
 	void	Dojob();
 	bool	getEtat();
+	void	setTarget(std::string target);
 };
 

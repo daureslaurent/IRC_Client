@@ -24,6 +24,7 @@ bool clientIrc::checkCmd(Message msg)
 	{
 		std::string channel = msg.data.substr(msg.data.find_last_of(":"));
 		std::cout << "Channel " << channel << " join" << std::endl;
+		thinput.setTarget(channel);
 	}
 	else if (msg.headCode == 372)
 		std::cout << "-> " << msg.data.substr(msg.data.find(":-") + 2) << std::endl;
@@ -54,7 +55,7 @@ bool clientIrc::Run()
 	if (!Init())
 		return false;
 
-	if (_net.connect(_me.getNick(), _me.getHostName(), _me.getUserName(), _me.getServName(), _me.getRealName(), "p") )
+	if (_net.connect(_me.getNick(), _me.getHostName(), _me.getUserName(), _me.getServName(), _me.getRealName(), _me.getPassword()) )
 	{
 		thinput.start(_net);
 		while (thinput.getEtat())
