@@ -12,10 +12,10 @@ void Me::askNet()
 			std::cout << "[" << i << "] " << _lserv[i]._addr << std::endl;
 		std::cout << "Choose the target server [nb]: ";
 		std::string	sSelec;
-		int			selec;
+		size_t			selec;
 		std::cin >> sSelec;
 		selec = std::atoi(sSelec.c_str());
-		if (selec >= 0 && selec <= _lserv.size())
+		if (selec <= _lserv.size())
 		{
 			_addr = _lserv[selec]._addr;
 			_port = _lserv[selec]._port;
@@ -63,10 +63,10 @@ void Me::askMe()
 		}
 		std::cout << "Choose your config[nb]: ";
 		std::string	sSelec;
-		int			selec;
+		size_t			selec;
 		std::cin >> sSelec;
 		selec = std::atoi(sSelec.c_str());
-		if (selec >= 0 && selec <= _lme.size())
+		if (selec <= _lme.size())
 		{
 			_nickname = _lme[selec]._nickname;
 			_username = _lme[selec]._username;
@@ -122,7 +122,12 @@ void Me::run()
 {
 	askNet();
 	askMe();
+#ifdef _WIN32
 	system("cls");
+#else
+	int ret = system("clear");
+	ret++; //Suppres Warning
+#endif
 	//Clean screen
 }
 

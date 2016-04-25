@@ -66,4 +66,5 @@ bool clientIrc::Run()
 		}
 	}
 	thinput.stop();
+	return true;
 }
